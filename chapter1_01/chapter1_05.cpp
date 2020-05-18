@@ -57,6 +57,7 @@ void main() {
 
 
 //3. 5의 배수가 되기 위해 필요한 숫자
+/*
 void main() {
 	int num, a;
 	cout << "숫자를 입력하세요 : ";
@@ -68,4 +69,18 @@ void main() {
 		cout << num << "는(이) 5의 배수가 되기 위해서는 " << a << "가 필요!" << endl;
 	}
 }
+*/
 
+//4.  배수 관계 확인 + 필요한 숫자
+void main() {
+	int num1, num2;
+
+	cout << "분석할 숫자를 입력 : ";
+	cin >> num1;
+	cout << "배수 숫자를 입력 : ";
+	cin >> num2;
+	if (num1%num2 == 0) cout << num1 << "은(는) " << num2 << "의 배수 입니다." << endl;
+	else {
+		cout << num1 << "은(이) " << num2 << "의 배수가 되기 위해서는 " << num2 - (num1%num2) << "가 필요!" << endl;
+	}
+}
