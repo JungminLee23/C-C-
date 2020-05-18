@@ -82,5 +82,6 @@ void main() {
 	if (num1%num2 == 0) cout << num1 << "은(는) " << num2 << "의 배수 입니다." << endl;
 	else {
 		cout << num1 << "은(이) " << num2 << "의 배수가 되기 위해서는 " << num2 - (num1%num2) << "가 필요!" << endl;
+		cout << "혹은 " << num1 % num2 << " 를 버리면 됩니다." << endl;
 	}
 }
