@@ -50,6 +50,8 @@ void main() {
 	cin >> n;
 	cout << n << "은" << endl;
 
+	// for 문을 이용하여 하는 방법이 있음.
+
 	n1 = n / 10000;
 	n = n % 10000;
 	
@@ -76,5 +78,4 @@ void main() {
 	cout << "백원짜리 : " << n5 << "개" << endl;
 	cout << "십원짜리 : " << n6 << "개" << endl;
 	cout << "나머지 잔돈 : " << n << "원" << endl;
-	//cout << "일원짜리 : " << n1 << "개" << endl;
 }
