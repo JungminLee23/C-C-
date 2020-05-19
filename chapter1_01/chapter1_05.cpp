@@ -72,6 +72,7 @@ void main() {
 */
 
 //4.  배수 관계 확인 + 필요한 숫자
+/*
 void main() {
 	int num1, num2;
 
@@ -85,3 +86,54 @@ void main() {
 		cout << "혹은 " << num1 % num2 << " 를 버리면 됩니다." << endl;
 	}
 }
+*/
+
+// 5.  아스키코드로 if문
+/*
+void main() {
+	char ch;
+	cout << "문자를 입력하세요 : ";
+	cin >> ch;
+	if (ch >= 'A' && ch <= 'Z') { //65-90
+		cout << "Upper case" << endl;
+	}
+	else if (ch >= 'a' && ch <= 'z') { //  97-122
+		cout << "Lower case" << endl;
+	}
+	else cout << "No Good" << endl;
+}
+*/
+
+// 6. if - else 문
+/*
+void main() {
+	int kor, eng, tot;
+	double avg;
+	cout << "국어 점수 : ";
+	cin >> kor;
+	cout << "영어 점수 : ";
+	cin >> eng;
+	tot = kor + eng;
+	avg = tot / 2.0;
+	if (avg <= 100 && avg >= 0) {
+		if (avg >= 90) {
+			cout << "A" << endl;
+		}
+		else if (avg >= 80) {
+			cout << "B" << endl;
+		}
+		else if (avg >= 70) {
+			cout << "C" << endl;
+		}
+		else if (avg >= 60) {
+			cout << "D" << endl;
+		}
+		else if (avg < 60) {
+			cout << "F" << endl;
+		}
+	}
+	else {
+		cout << "what?" << endl;
+	}
+}
+*/
