@@ -1,8 +1,4 @@
-#include<iostream>
-#include<iomanip>
-
-using namespace std;
-
+#include "1.h"
 
 // 1. switch-cas 문을 이용해서 
 /*
