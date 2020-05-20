@@ -243,69 +243,100 @@ void main() {
 }
 */
 
-// 13. 알고리즘?
-// 홀수끼리의 합, 짝수끼리의 합
-
+// 13. 최대공약수, 최소 공배수(유클리드 호제법)
 /*
 void main() {
-	// i -> 1~100까지
-	// asum = 1~100까지 홀수 합
-	// bsum = 1~100까지 짝수 합
-	// sw => 스위치 변수(짝수인지 홀수인지 확인)
+	int u, v, gcm, lcm, m, n;
+	cout << "두 수를 입력하세요 : ";
+	cin >> u >> v;
+	m = u;
+	n = v;
 
-	int asum = 0, bsum = 0, sw = 0, i = 1;
-	
-	while ( i <= 100) {
-		sw = i % 2;
-		if (sw == 1) {
-			asum += i;
+	while (m != n) {
+		if (m > n) {
+			m = m - n;
 		}
-		else bsum += i;
-		i++;
+		else {
+			n = n - m;
+		}
 	}
-	cout << "asum = " << asum << " bsum = " << bsum;
+
+	gcm = m;
+	lcm = u * v / gcm;
+	cout << "최대 공약수는 : " << gcm << endl;
+	cout << "최소 공배수는 : " << lcm << endl;	
 }
-
-// 알고리즘에 나와있는 순서대로 풀자면 이렇게
-//void main() {
-// sw가 0이면 짝수 1이면 홀수
-//	int i = 0, asum = 0, bsum = 0, sw = 1;
-//	do {
-//		i++;
-//		if (sw == 0) {
-//			asum += i;
-//			sw = 1;
-//		}
-//		else {
-//			bsum += i;
-//			sw = 0;
-//		}
-//	} while (i < 100);
-//}
-
 */
 
-// 14. 알고리즘 2
+// 14. 최대 공약수를 찾는 법 : 큰 수를 작은 수로 나누고 그 나머지가 최대 공약수
+/*
 void main() {
-	// -,+ 가 번갈아서 등장하면서 1~100까지 연산.
-	int sum = 0, num = 1, sw = 1;
-	while (num <= 100) {
-		// 방법 1.
-		//if (sw == 1) //홀수
-		//{
-		//	sum += num;
-		//	sw = 0;
-		//}
-		//else //짝수
-		//{
-		//	sum -= num;
-		//	sw = 1;
-		//}
-
-		// 방법 2.
-		sum += sw*num;
-		sw *=-1;
-		num++;
+	int u, v, gcm, lcm, s, l, na;
+	cout << "두 수를 입력하세요 : ";
+	cin >> u >> v;
+	if (u > v) {
+		s = v;
+		l = u;
 	}
-	cout << "결과는 " << sum << endl;
+	else {
+		s = u;
+		l = v;
+	}
+	while (s != 0) {
+		na = l % s;
+		l = s;
+		s = na;
+		gcm = l;
+		lcm = u * v / gcm;
+		cout << "최대 공약수는 : " << gcm << endl;
+		cout << "최소 공배수는 : " << lcm << endl;
+	}
 }
+*/
+
+//소문자 입력 하면 대문자 입력하라 함. ---> 쭉 그럼
+//대문자를 입력하면 그 입력한 문자 부터 ~ 내가 입력한 문자 전까지 쭉 나옴.
+//알파벳 총 26개
+/*
+void main() {
+	char al;
+	cout << "한 문자를 입력하세요 : ";
+	cin >> al;
+	while (al < 65 || al > 90) {
+		cout << "대문자를 입력하세요 : ";
+		cin >> al;
+	}
+
+	char mun = al;
+
+	for (int i = 0; i < 26; i++) {
+		mun = al + i;
+		if (mun > 'Z') {
+			cout << (char)(mun - 26) <<" ";
+		}
+		else cout << mun << " ";
+	}
+}
+*/
+// 쌤 방법
+//void main() {
+//	char mun, aip;
+//	int i;
+//	cout << "한 문자를 입력하세요 : ";
+//	while (1) {
+//		cin >> mun;
+//		if (mun >= 'A' && mun <= 'Z') {
+//			for (i = 1; i <= 26; i++) {
+//				aip = mun++;
+//				cout << setw(2) << aip;
+//				if (mun > 'Z') mun = mun - 26;
+//			}
+//			cout << endl;
+//			break;
+//		}
+//		else {
+//			cout << "대문자를 입력하세요 : ";
+//			continue;
+//		}
+//	}
+//}
