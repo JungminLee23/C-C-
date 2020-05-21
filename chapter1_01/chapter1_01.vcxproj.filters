@@ -36,6 +36,9 @@
     <ClCompile Include="chapter1_07.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="chapter1_08.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1.h">
